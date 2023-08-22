@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chance of Admission</title>
+</head>
+
+<body>
+    <h1>
+        Enter The Details Below:
+    </h1>
+    <br>
+    <h1>
+        NOTE : Enter All The Things In Numerical Form
+    </h1>
+    <br>
+
+    <form action="/my_data" method="post">
+        <label for="TOEFL_Score">TOEFL_Score :</label>
+        <input type="text" name="TOEFL_Score" id="TOEFL_Score"> <br>
+
+        <label for="CGPA">CGPA :</label>
+        <input type="text" name="CGPA" id="CGPA" min=0 , max=10><br>
+
+        <label for="SOP">SOP (0 to 5):</label>
+        <input type="text" name="SOP" id="SOP"><br>
+
+        <label for="LOR">LOR (0 to 5):</label>
+        <input type="text" name="LOR" id="LOR"><br>
+
+        <label for="University_Rating">University_Rating (1 to 5):</label>
+        <input type="number" name="University_Rating" id="University_Rating"><br>
+
+        <label for="GRE_Score">GRE_Score :</label>
+        <input type="text" name="GRE_Score" id="GRE_Score"><br>
+
+        <label for="Research">Research :</label><br>
+        <input type="radio" id="Research" name="Research" value="1" checked />
+        <label for="Research">YES</label>
+        <input type="radio" id="Research" name="Research" value="0" />
+        <label for="Research">NO</label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    
+    <h1> The chance of Admission : {{ result }} % </h1>
+
+</body>
+
+</html>
